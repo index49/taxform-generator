@@ -189,94 +189,67 @@ input:required, textarea:required {
 </head>
 <body>
 
-<form class="my_form" action="" name="my_form">
+
+<form class="my_form" action="" method="post" name="my_form">
 <ul>
 <li>
 	 <h2>Personal Information</h2>
 </li>
 <li>
 	<label>first name:</label>
-	<input type="text" id="first_name" placeholder="John" />
+	<input type="text" name="first_name" placeholder="John"/>
     <span class="form_hint">"John"</span>
 </li>
 <li>
     <label>last name:</label>
-    <input type="text" id="last_name" placeholder="Doe" />
+    <input type="text" name="last_name" placeholder="Doe" />
     <span class="form_hint">"Doe"</span>
 </li>
 <li>
     <label>website:</label>
-    <input type="text" id="address" placeholder="123 Road St" />
+    <input type="text" name="address" placeholder="123 Road St" />
     <span class="form_hint">"123 Road St"</span>
 </li>
-</form>
-
-<form class="my_form" action="" name="my_form">
 <ul>
 <li>
 	 <h2>W2 Form</h2>
 </li>
 <li>
 	<label>box 1:</label>
-	<input type="text" id="w2.1" placeholder="0" />
+	<input type="text" name="w2.1" placeholder="0" />
 </li>
 <li>
 	<label>box 2:</label>
-	<input type="text" id="w2.2" placeholder="0" />
+	<input type="text" name="w2.2" placeholder="0" />
 </li>
 <li>
 	<label>box 3:</label>
-	<input type="text" id="w2.3" placeholder="0" />
+	<input type="text" name="w2.3" placeholder="0" />
 </li>
-</form>
-
-<form class="my_form" action="" name="my_form">
 <ul>
 <li>
 	 <h2>Other</h2>
 </li>
 <li>
 	<label>realestate tax:</label>
-	<input type="text" id="realestate_tax" placeholder="0" />
+	<input type="text" name="realestate_tax" placeholder="0" />
 </li>
 <li>
 	<label>taxable interest:</label>
-	<input type="text" id="taxable_interest" placeholder="0" />
+	<input type="text" name="taxable_interest" placeholder="0" />
 </li>
 <li>
 	<label>homebuyer repayment:</label>
-	<input type="text" id="homebuyer_repayment" placeholder="0" />
+	<input type="text" name="homebuyer_repayment" placeholder="0" />
 </li>
-</form>
-
-<!--<form class="my_form" action="" method="post" name="my_form">-->
-<form class="my_form" action="" name="my_form">
 <li>
-    <button class="submit" onclick="onSubmit()" type="submit">Submit Form</button>
+    <button class="submit" type="submit">Submit Form</button>
 </li>
 </form>
 
 
 
 </ul>
-
-<script>
-function onSubmit()
-{
-	var data = '{' +
-		'{ "first_name"			: '	+ document.getElementById("first_name").value			+ '},' +
-		'{ "last_name"			: '	+ document.getElementById("last_name").value			+ '},' +
-		'{ "address"			: ' + document.getElementById("address").value				+ '},' +
-		'{ "w2.1"				: ' + document.getElementById("w2.1").value					+ '},' +
-		'{ "w2.2"				: ' + document.getElementById("w2.2").value					+ '},' +
-		'{ "w2.3"				: ' + document.getElementById("w2.3").value					+ '},' +
-		'{ "taxable_interest"	: ' + document.getElementById("taxable_interest").value		+ '},' +
-		'{ "realestate_tax"		: ' + document.getElementById("realestate_tax").value		+ '},' +
-		'{ "homebuyer_repayment": ' + document.getElementById("homebuyer_repayment").value	+ '},' +
-	'}';
-}
-
-</script>
 
 </body>
 </html>
