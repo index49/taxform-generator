@@ -6,236 +6,293 @@
     <link rel="stylesheet" media="screen" href="styles.css" >
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab">
 <style>
-/* override focus defaults */
-*:focus {outline: none;}
-
-/* typographic styles */
-body {
-	/*font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;*/
-	font-family:'Josefin Slab', serif;
-	font-size: 20px;
-	background-color: #e3e5ea
-}
-.my_form h2, .my_form label 
+/*body 
 {
-	/*font-family:Georgia, Times, "Times New Roman", serif;*/
-	font-family:'Josefin Slab', serif;
-	font-size: 20px;
+	padding: 30px 30px;
+	font: 13px/100% Josefin Slab, sans-serif;
+	overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
-.form_hint, .required_notification {font-size: 11px;}
-
-/* list styles */
-.my_form ul {
-    width:750px;
-    list-style-type:none;
-    list-style-position:outside;
-    margin:0px;
-    padding:0px;
-}
-.my_form li{
-    padding:12px; 
-    border-bottom:1px solid #eee;
-    position:relative;
+*/
+html{
+    height: 100%;
+    width: 100%;
 }
 
-/* add section lines */
-.my_form li:first-child, .my_form li:last-child {
-    border-top:1px solid #777;
+body{
+	padding: 30px 30px;
+	font: 16px/100% Josefin Slab, sans-serif;
+    background: url("http://iskin.co.uk/wallpapers/styles/ipad/public/staples.jpg") no-repeat top center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
-/* form header style */
-.my_form h2 {
-    margin:0;
-    display: inline;
-}
-.required_notification {
-    color:#d45252; 
-    margin:5px 0 0 0; 
-    display:inline;
-    float:right;
-}
-
-/* form input elements */
-.my_form label {
-    width:150px;
-    margin-top: 3px;
-    display:inline-block;
-    float:left;
-    padding:3px;
-}
-.my_form input {
-    height:20px; 
-    width:220px; 
-    padding:5px 8px;
-}
-.my_form textarea {padding:8px; width:300px;}
-.my_form button {margin-left:156px;}
-
-/* extra visual css styles */
-.my_form input, .my_form textarea { 
-    border:1px solid #aaa;
-    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-    border-radius:2px;
-}
-.my_form input:focus, .my_form textarea:focus {
-    background: #fff; 
-    border:1px solid #555; 
-    box-shadow: 0 0 3px #aaa; 
-}
-/* Button Style */
-button.submit {
-    background-color: #68b12f;
-    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
-    background: -webkit-linear-gradient(top, #68b12f, #50911e);
-    background: -moz-linear-gradient(top, #68b12f, #50911e);
-    background: -ms-linear-gradient(top, #68b12f, #50911e);
-    background: -o-linear-gradient(top, #68b12f, #50911e);
-    background: linear-gradient(top, #68b12f, #50911e);
-    border: 1px solid #509111;
-    border-bottom: 1px solid #5b992b;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    box-shadow: inset 0 1px 0 0 #9fd574;
-    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
-    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
-    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+.header{
+    height: 75%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     color: white;
-    font-weight: bold;
-    padding: 6px 20px;
     text-align: center;
-    text-shadow: 0 -1px 0 #396715;
-}
-button.submit:hover {
-    opacity:.85;
-    cursor: pointer; 
-}
-button.submit:active {
-    border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset; 
-    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
-    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
-    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
-    -o-box-shadow: 0 0 10px 5px #356b0b inset;
-     
+    font-size: 50px;
 }
 
-/* expand fields when in focus */
-.my_form input:focus, .my_form textarea:focus {
-    padding-right:70px;
-}
-/* smooth expand fields when in focus */
-.my_form input, .my_form textarea {
-    -moz-transition: padding .25s; 
-    -webkit-transition: padding .25s; 
-    -o-transition: padding .25s;
-    transition: padding .25s;
+.content{
+    width: 100%;
+    height: 150%;
+    background: white;
+    margin: 0;
+    padding: 0;
 }
 
-/* style for required fields */
-.my_form input, .my_form textarea {
-    padding-right:30px;
-}
-input:required, textarea:required {
-    background: #fff url(images/red_asterisk.png) no-repeat 98% center;
-}
 
-/* red border */
-.my_form input:focus:invalid, .my_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
-    background: #fff url(images/invalid.png) no-repeat 98% center;
-    box-shadow: 0 0 5px #d45252;
-    border-color: #b03535
+form 
+{ 
+	padding: 20px; 
+	width: 650px; 
+	display: block; 
+	background: #FAFAFA; 
+	margin: 0 auto;
+	/*font-color: #000000;*/
 }
-
-/* green border */
-.my_form input:required:valid, .my_form textarea:required:valid { /* when a field is considered valid by the browser */
-    background: #fff url(images/valid.png) no-repeat 98% center;
-    box-shadow: 0 0 5px #5cd053;
-    border-color: #28921f;
+h1 { 
+	text-align: center;
+	font: 100px/100% Josefin Slab, sans-serif;
 }
-
-/* form field hints */
-.form_hint {
-    background: #d45252;
-    border-radius: 3px 3px 3px 3px;
-    color: white;
-    margin-left:8px;
-    padding: 1px 6px;
-    z-index: 999; /* hints stay above all other elements */
-    position: absolute; /* allows proper formatting if hint is two lines */
-    display: none;
+h2 { 
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #C0C0C0;
+	padding: 10px 0px 10px 0px;
 }
+input, textarea
+{
+	line-height: 25px;
+	padding: 5px;
+	width: 285px;
+	border: 1px solid #E5E5E5;
+	outline: 0;
+	font: normal 15px/150% Verdana, sans-serif;
 
-.form_hint::before {
-    content: "\25C0"; /* left point triangle in escaped unicode */
-    color:#d45252;
-    position: absolute;
-    top:1px;
-    left:-6px;
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.1);
+	box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+	background: -webkit-linear-gradient(top, #EEE 0px, #FFF 25px);
+	background: -moz-linear-gradient(top, #EEE 0px, #FFF 25px);
 }
 
-.my_form input:focus + .form_hint {display: inline;}
-.my_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
-.my_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
+textarea {
+	width: 420px;
+	max-width: 400px;
+	height: 180px;
+}
 
+input:hover, input:focus,
+textarea:hover, textarea:focus {
+	border-color: #C9C9C9;
 
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.15);
+	box-shadow: 0 0 8px rgba(0,0,0,.15);
+}
 
+label {
+	padding-left: 10px;
+	color: #303030;
+	display: inline-block;
+	width: 140px;   
+}
+
+input[type=text] {
+	width: 140px;   
+}
+
+input[type=submit] {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+input[type=submit]:hover {
+	background: #7387A6;
+	-webkit-box-shadow: 1px 1px 8px rgba(0,0,0,.4);
+}
+
+select{
+	padding: 5px 40px 5px 5px; 
+	height:40px; 
+	font-family: Verdana, sans-serif;
+	background: url(../arrow.png) 90% 50% no-repeat;
+
+	-webkit-appearance: none;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	
+	cursor: pointer;
+	border: 1px solid #CCC;
+	color: #999;
+	font-size: 90%;
+	overflow: hidden;
+}
+
+select:hover, select:focus {
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+	outline: 0;
+	cursor: pointer;
+	border: 1px solid #CCC;
+	color: #999;
+	font-size: 90%;
+	overflow: hidden;
+}
 </style>
-
-<h1>Tax Generator</h1>
 </head>
 <body>
 
+<div class="header"></div>
+<h1>Tax Form Generator</h1>
 
+<div class="content">
 <form class="my_form" action="" method="post" name="my_form">
-<ul>
-<li>
-	 <h2>Personal Information</h2>
-</li>
-<li> <label>first name:</label> <input type="text" name="first_name" placeholder="John"/> </li>
-<li> <label>last name:</label> <input type="text" name="last_name" placeholder="Doe" /> </li>
-<li> <label>address:</label> <input type="text" name="address" placeholder="123 Road St" /> </li>
-<li><label>city:			</label> <input type="text" name="city"				placeholder="0"/></li>
-<li><label>state:			</label> <input type="text" name="state"			placeholder="0"/></li>
-<li><label>zip:			    </label> <input type="text" name="zip"				placeholder="0"/></li>
-<li><label>ss:		        </label> <input type="text" name="ss"				placeholder="0"/></li>
-<li><label>spouse_ss:       </label> <input type="text" name="spouse_ss"		placeholder="0"/></li>
-<li><label>filing_status:   </label> <input type="text" name="filing_status"	placeholder="0"/></li>
-<li><label>routing_number:  </label> <input type="text" name="routing_number"	placeholder="0"/></li>
-<li><label>account_number:  </label> <input type="text" name="account_number"	placeholder="0"/></li>
-<li><label>occupation:	    </label> <input type="text" name="occupation"		placeholder="0"/></li>
-<ul>
-<li>
-	 <h2>W2 Form</h2>
-</li>
-<li> <label>box 1:</label><input type="text" name="w2.1" placeholder="0" /> </li>
-<li> <label>box 2:</label><input type="text" name="w2.2" placeholder="0" /> </li>
-<li> <label>box 3:</label><input type="text" name="w2.3" placeholder="0" /> </li>
-<li> <label>box 4:</label><input type="text" name="w2.4" placeholder="0" /> </li>
-<li> <label>box 5:</label><input type="text" name="w2.5" placeholder="0" /> </li>
-<li> <label>box 6:</label><input type="text" name="w2.6" placeholder="0" /> </li>
-<li> <label>box 12a:</label><input type="text" name="w2.12a" placeholder="0" /> </li>
-<li> <label>box 12b:</label><input type="text" name="w2.12b" placeholder="0" /> </li>
-<li> <label>box 16:</label><input type="text" name="w2.16" placeholder="0" /> </li>
-<li> <label>box 17:</label><input type="text" name="w2.17" placeholder="0" /> </li>
-<ul>
-<li>
-	 <h2>Other</h2>
-</li>
-<li> <label>realestate tax:</label> <input type="text" name="misc.real_estate" placeholder="0" /> </li>
-<li> <label>mortgage interest:</label> <input type="text" name="misc.mortgage_interest" placeholder="0" /> </li>
-<li> <label>gifts to charity:</label> <input type="text" name="misc.gifts" placeholder="0" /> </li>
-<li> <label>taxable interest:</label> <input type="text" name="misc.taxable_interest" placeholder="0" /> </li>
-<li> <label>taxable refund:</label> <input type="text" name="misc.taxable_refund" placeholder="0" /> </li>
-<li> <label>homebuyer repayment:</label> <input type="text" name="misc.homebuyer_credit" placeholder="0" /> <span class="form_hint">from f5045</span>
-</li>
+	<h2>Personal Information</h2>
+	<p>
+		<label>First</label>
+		<label>Last</label>
+	</p> 
+	<p>
+		<input type="text" 	name="first_name" 		placeholder="John">
+		<input type="text" 	name="last_name" 		placeholder="Doe" >
+	</p>
+	<p>
+		<label>Address</label>
+		<label>City</label>
+		<label>State</label>
+		<label>Zip Code</label>
+	</p>
+	<p>
+		<input type="text" 	name="address" 			placeholder="123 Road St">
+		<input type="text" 	name="city"				placeholder="City"		>
+		<input type="text" 	name="state"			placeholder="State"		>
+		<input type="text" 	name="zip"				placeholder="12345"		>
+	</p>
+	<p>
+		<label>Filing Status</label>
+	</p>
+	<p>
+		<select type="text" 	name="filing_status"	placeholder="0"		style="width: 200px;">
+			<option>single</option>
+			<option>married filing separately</option>
+			<option>married filing jointly</option>
+			<option>head of household</option>
+		</select>
+	</p>
+	<p>
+		<label>SSN</label>
+		<label>spouse SSN</label>
+	</p>
+		<input type="text" 	name="ss"				placeholder="1234567890">
+		<input type="text" 	name="spouse_ss"		placeholder="1234567890">
+	</p>
+	<p>
+		<label>Bank Routing #</label>
+		<label>Bank Account #</label>
+		<label>Occupation</label>
+	</p>
+	<p>
+		<input type="text" 	name="routing_number"	placeholder="123456789">
+		<input type="text" 	name="account_number"	placeholder="1234567890">
+		<input type="text" 	name="occupation"		placeholder="Associate">
+	</p>
 
-<li> <button class="submit" type="submit">Submit Form</button> </li>
+	<br>
+	<h2>W2 Form</h2>
+	<p>
+		<label>1</label>
+		<label>2</label
+	</p>
+	<p>
+		<input type="text" 	name="w2.1" 			value="0">
+		<input type="text" 	name="w2.2" 			value="0">
+	</p>
+	<p>
+		<label>3</label>
+		<label>4</label>
+	</p>
+	<p>
+		<input type="text" 	name="w2.3" 			value="0">
+		<input type="text" 	name="w2.4" 			value="0">
+	</p>
+	<p>
+		<label>5</label>
+		<label>6</label>
+	</p>
+	<p>
+		<input type="text" 	name="w2.5" 			value="0">
+		<input type="text" 	name="w2.6" 			value="0">
+	</p>
+	<p>
+		<label>12a</label>
+		<label>12b</label>
+	</p>
+	<p>
+		<input type="text" 	name="w2.12a" 			value="0">
+		<input type="text" 	name="w2.12b" 			value="0">
+	</p>
+	<p>
+		<label>16</label>
+		<label>17</label>
+	</p>
+	<p>
+		<input type="text" 	name="w2.16" 			value="0">
+		<input type="text" 	name="w2.17" 			value="0">
+	</p>
+
+	<br>
+	<h2>Other</h2>
+	<p>
+		<label>Realestate Tax</label>
+		<label>Mortgage Interest</label>
+	</p>
+	<p>
+		<input type="text" 	name="misc.real_estate" 		value="0">
+		<input type="text" 	name="misc.mortgage_interest" 	value="0">
+	</p>
+	<p>
+		<label>Gifts to Charity</label>
+		<label>Taxable Interest</label>
+	</p>
+	<p>
+		<input type="text" 	name="misc.gifts" 				value="0">
+		<input type="text" 	name="misc.taxable_interest" 	value="0">
+	</p>
+	<p>
+		<label>Taxable Refund</label>
+		<label>Homebuyer Credit Repayment</label>
+	</p>
+	<p>
+		<input type="text" 	name="misc.taxable_refund" 		value="0">
+		<input type="text" 	name="misc.homebuyer_credit" 	value="0">
+	</p>
+
+	<p><input type="submit" value="Submit"></p>
 </form>
-
+</div>
 
 
 </ul>

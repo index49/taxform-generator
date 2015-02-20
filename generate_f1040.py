@@ -41,7 +41,7 @@ def getTaxValues(inputData):
 	status = getTax.getStatus('sep')
 	data = getTax.read_p505('p505.txt')
 	
-	d[7] = w2['1']
+	d[7] = float(w2['1'])
 	d[8] = float(inputData['misc']['taxable_interest'])
 	d[10] = float(inputData['misc']['taxable_refund'])
 	d[22] = sum(d[7:21+1])			# total income 
@@ -62,7 +62,7 @@ def getTaxValues(inputData):
 	d[60] = float(inputData['misc']['homebuyer_credit'])
 	d[63] = sum(d[55:60+1])
 
-	d[64] = w2['2']					# federal income tax witheld
+	d[64] = float(w2['2'])					# federal income tax witheld
 	d[74] = sum(d[64:71+1])			# total payments
 
 	if d[74] > d[63]:
@@ -75,7 +75,7 @@ def getTaxValues(inputData):
 
 def initPage(can):
 	can.setFont("Helvetica" , 10)
-	can.setFillColorRGB(0,0,1)
+	can.setFillColorRGB(0,0,0)
 
 def insertValue(can, values, index, x, y, ySpace):
 	val = values[index]
